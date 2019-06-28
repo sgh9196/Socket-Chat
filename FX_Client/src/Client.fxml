@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="splitPane" dividerPositions="0.44802867383512546" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Action.ClientController">
+  <items>
+    <AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="321.0" prefWidth="295.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="350.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../index.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" layoutX="33.0" layoutY="32.0" prefHeight="165.0" prefWidth="179.0" spacing="5.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="IP Address" />
+                        <TextField fx:id="text_IP" promptText="IP Adderss" text="127.0.0.1" />
+                        <Label style="-fx-font-weight: bold;" text="Port" />
+                        <TextField fx:id="text_Port" promptText="Port Number" text="9999" />
+                        <Label style="-fx-font-weight: bold;" text="Nick Name" />
+                        <TextField fx:id="text_Nice" promptText="Nick Name" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="16.0" layoutY="281.0" prefHeight="45.0" prefWidth="214.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="btn_Connect" style="-fx-background-color: lightblue;" text="Connect" />
+                        <Button fx:id="btn_Cancel" style="-fx-background-color: lightblue;" text="Cancel" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="303.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btn_Stop" mnemonicParsing="false" text="Stop" />
+                  <Label text="Text" />
+                  <TextField fx:id="textField" prefHeight="26.0" prefWidth="148.0" />
+                  <Button fx:id="btn_Send" mnemonicParsing="false" text="Send" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <HBox alignment="CENTER" prefHeight="306.0" prefWidth="303.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="textArea1" prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea fx:id="textArea2" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+  </items>
+</SplitPane>

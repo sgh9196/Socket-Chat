@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="371.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Action.ServerController">
+<!--  fx:controller="Action.ServerController" -->
+	<center>
+		<TextArea fx:id="textArea" disable="false" editable="false" prefHeight="191.0" prefWidth="390.0" style="-fx-background-color: yellow; -fx-highlight-fill: #00ff00; -fx-text-fill: blue;" BorderPane.alignment="CENTER" />
+	</center>
+	<right>	
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color:lightgray" BorderPane.alignment="CENTER">
+			<children>
+				<Label text="접속자">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+				</Label>
+            <ScrollPane fx:id="scrollPane" prefHeight="281.0" prefWidth="100.0">
+               <content>
+                  <VBox fx:id="scr_vBox" alignment="TOP_CENTER" prefHeight="231.0" prefWidth="97.0" />
+               </content>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ScrollPane>
+				<Label text="접속 인원">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+				</Label>
+				<ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+			</children>
+		</VBox>
+	</right>
+   <top>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="318.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="54.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logo.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="75.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+         <children>
+      		<HBox alignment="CENTER" prefHeight="45.0" prefWidth="388.0" spacing="20.0">
+      			<children>
+      				<Button fx:id="btn_Option" mnemonicParsing="false" text="Option" />
+      				<Button fx:id="btn_Start" mnemonicParsing="false" text="Start" />
+      				
+      				<!-- <fx:define><ToggleGroup fx:id="group"/></fx:define> -->
+      				
+      					<RadioButton fx:id="opt_Single" text="Single" toggleGroup="$group">
+      						<toggleGroup>
+      							<ToggleGroup fx:id="group" />
+      						</toggleGroup>
+      					</RadioButton>
+      					
+      					<RadioButton fx:id="opt_Multiple" text="Multiple" toggleGroup="$group" />
+      				
+      			</children>
+      		</HBox>
+            <HBox fx:id="hBox_Single" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" visible="false">
+               <children>
+                  <Label fx:id="lb_Target" text="" />
+                  <Label text="Text" />
+                  <TextField fx:id="text_Send" />
+                  <Button fx:id="btn_Send" mnemonicParsing="false" text="Send" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>
